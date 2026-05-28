@@ -18,6 +18,7 @@ E-DUCA é uma plataforma que democratiza o acesso à educação, conectando alun
 ```bash
 git clone https://github.com/seu-usuario/e-duca.git
 cd e-duca
+```
 
 2. Configure as variáveis de ambiente
 
@@ -31,7 +32,7 @@ PORT=3000
     Importante: Substitua sua_string_de_conexao_mongodb pela URL do seu banco MongoDB Atlas ou local. Exemplo: mongodb+srv://usuario:senha@cluster.mongodb.net/e-duca-semestre-3?retryWrites=true&w=majority
 
 3. Instale as dependências
-bash
+```bash
 
 # Backend (raiz do projeto)
 npm install
@@ -40,16 +41,16 @@ npm install
 cd frontend-react
 npm install
 cd ..
-
+```
 4. Configure o Prisma e popule o banco de dados
-bash
+```bash
 
 # Gera o cliente Prisma
 npx prisma generate
 
 # Executa o seed (cria usuários, recursos e notícias de exemplo)
 npx prisma seed
-
+```
 O script de seed criará automaticamente:
 
     Usuário administrador: admin@educa.com / admin123
@@ -64,6 +65,7 @@ O script de seed criará automaticamente:
 npm run dev
 
 O backend estará disponível em http://localhost:3000.
+```
 6. Inicie o frontend React
 ```bash
 
@@ -75,9 +77,9 @@ Acessando o sistema
 Perfil	E-mail	Senha
 Administrador	admin@educa.com	admin123
 Usuário comum	usuario@exemplo.com	senha123
-
+```
 Estrutura do projeto
-text
+```text
 
 e-duca/
 ├── backend/                # API REST (Node.js + Express + Prisma)
@@ -94,7 +96,7 @@ e-duca/
 │   ├── schema.prisma
 │   └── seed.js
 └── .env                    # Variáveis de ambiente (não versionado)
-
+```
 Tecnologias utilizadas
 
     Backend: Node.js, Express, Prisma ORM, MongoDB Atlas, JWT, bcrypt
